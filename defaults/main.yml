@@ -1,0 +1,7 @@
+---
+# defaults file for ansible-role-ubuntu-dell-xps13-9350.
+powertop_commands:
+  - "echo '1500' > '/proc/sys/vm/dirty_writeback_centisecs';"
+  - "echo 'auto' > '/sys/bus/usb/devices/1-4/power/control';"
+
+enable_wifi_resume_service: True

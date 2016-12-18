@@ -1,0 +1,19 @@
+---
+# tasks file for ansible-role-ubuntu-dell-xps13-9350.
+
+- name: Create network-manager restart service.
+  copy:
+    src: "wifi-resume.service"
+    dest: "/etc/systemd/system/wifi-resume.service"
+    force: no
+  become: True
+  when: "{{ enable_wifi_resume_service }}"
+
+- name: Enable new network-manager restart service.
+  command: "systemctl enable wifi-resume.service"
+  become: True
+  when: "{{ enable_wifi_resume_service }}"
+
+- name: Execute Powertop suggested commands.
+  shell: "{{ item }}"
+  with_items: "{{ powertop_commands }}"
