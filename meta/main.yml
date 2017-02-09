@@ -133,7 +133,7 @@ galaxy_info:
   #  - vivid
   #  - wily
   #  - xenial
-     - yakkety
+    - yakkety
   #- name: Debian
   #  versions:
   #  - all
