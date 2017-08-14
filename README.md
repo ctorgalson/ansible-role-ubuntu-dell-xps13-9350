@@ -1,3 +1,5 @@
+**With a fully up-to-date bios on this hardware, this role should be obsolete**.
+
 # Dell xps 13 9350
 
 This role corrects various small driver/compatibility issues and provides some power-management settings for the 9350 model Dell xps 13.
